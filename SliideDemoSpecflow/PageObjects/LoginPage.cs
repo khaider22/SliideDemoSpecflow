@@ -85,5 +85,18 @@ namespace SliideDemoSpecflow
             var lodinButton = _scenarioContext.Get<AndroidDriver<AppiumWebElement>>().FindElementById("id.creatorb.login:id/btnSingIn");
             lodinButton.Click();
         }
+
+        public bool CheckConnection(ScenarioContext _scenarioContext)
+        {
+            ConnectionProfile connection = NetworkInformation.GetInternetConnectionProfile();
+            
+            if ((connection != null) && (connection.GetNetworkConnectivityLevel() >= NetworkConnectivityLevel.InternetAccess))
+            {
+                return true;
+            }
+
+            else
+                return false;
+        }
     }
 }

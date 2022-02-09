@@ -46,7 +46,7 @@ namespace SliideDemoSpecflow.Features
             loginPageMethods.EnterPassword(password, _scenarioContext);
         }
 
-        [Then(@"the login button is displayed"]
+        [Then(@"the login button is displayed")]
         public void TheLoginButtonIsDisplayed()
         {
             loginPageMethods.LoginButtonIsDisplayed(_scenarioContext);
@@ -68,6 +68,12 @@ namespace SliideDemoSpecflow.Features
         public void ISeeTheErrorsOnUsernameAndPasswordBox()
         {
 
+        }
+
+        [When(@"there is internet connection")]
+        public void ThereIsInternetConnection()
+        {
+            loginPageMethods.CheckConnection();
         }
     }
 }

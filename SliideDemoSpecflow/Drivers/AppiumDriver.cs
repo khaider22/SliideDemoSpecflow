@@ -3,6 +3,7 @@ using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 using System;
+using Windows.Networking.Connectivity;
 
 namespace SliideDemoSpecflow.Drivers
 {
@@ -18,6 +19,7 @@ namespace SliideDemoSpecflow.Drivers
             driverOption.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             driverOption.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Pixel 3");
             driverOption.AddAdditionalCapability(MobileCapabilityType.AutomationName, "UiAutomator1");
+            
             driverOption.AddAdditionalCapability(MobileCapabilityType.App, appPath);
             driverOption.AddAdditionalCapability("ChromeDriverExecuteable", @"C:\Driver\ChromeDriver.exe");
 
